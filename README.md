@@ -12,9 +12,10 @@ To use the script on an Internet facing computer:
     
 ```powershell
     PS> install-module Selenium -Scope AllUsers
+    PS> Get-module Selenium -Listavailable
 ```
     
-2. Use Get-module Selenium -Listavailable to see where it is installed. This depends on the installed PowerShell version and on the scope chosen in the above command
+2. This location of the module will depend on the installed version of PowerShell and on the scope chosen (Allusers/CurrentUser)
     
 3. If using PowerShell 7.x and scope is AllUsers, enter the following (adjust as necessary):
     
@@ -23,23 +24,23 @@ To use the script on an Internet facing computer:
     PS> Add-Type -Path "C:\Program Files\PowerShell\Modules\Selenium\3.0.1\assemblies\WebDriver.dll"
 ```
 
-4. Selenium ships with Browser drivers for Chrome, Firefox, Edge. These will probably be out of date. Find the installed version of the broswer you intend to use and download the appropriate driver. For example, with Chrome, download the matching driver from  https://sites.google.com/a/chromium.org/chromedriver/downloads, and replace the chromedriver.exe file in the same Selenium folder, as above.
+4. Selenium ships with Browser drivers for Chrome, Firefox, Edge. These will probably be out of date for the version of the broswer you have installed. You will need to download a matching driver. For Chrome, install the driver from  https://sites.google.com/a/chromium.org/chromedriver/downloads, and replace the chromedriver.exe file in the same Selenium install folder, as above.
 
 ## Example usage
 ```powershell
     PS C:\> .\Get-HPEwarranty -Filename serial.csv -verbose
 ```
 
-Get the warranty information for all serial numbers in the specified CSV file. Use -Verbose to provide status messages.
+Get the warranty information for all serial numbers in the specified CSV file. Use -Verbose to provide status messages. This will create a new file called serial_new.csv with the HPE warranty information appended to the original objects.
     
 ```powershell
     PS C:\> .\Get-HPEwarranty -Filename serial.csv -verbose -ignore XXX1111XXXX,YYY2222YYYY
 ```
 
-Use the -ignore parameter to exclude one or more problematic serial numbers. These will show up in the finalreport with a suitable message.
+Use the -ignore parameter to exclude one or more problematic serial numbers. These will show up in the final report with a suitable message.
 
 ```powershell
     PS C:\> .\Get-HPEwarranty -Filename serial.csv -verbose -ignore C:\Ignore.txt
 ```
 
-Use the -ignore parameter to exclude one or more problematic serial numbers from a text file. These will show up in the final report with a suitable message.
+Use the -ignore parameter to exclude one or more problematic serial numbers from an input text file. These will show up in the final report with a suitable message.
