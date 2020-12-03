@@ -3,7 +3,8 @@ Find warranty and support contract information for HPE hardware using PowerShell
 
 ## Requirements
 
-Selenium PowerShell Module downloaded from the PowerShell Gallery.
+Internet facing computer
+Selenium PowerShell Module downloaded from the PowerShell Gallery
 
 ## Installation
 
@@ -15,7 +16,7 @@ To use the script on an Internet facing computer:
     PS> Get-module Selenium -Listavailable
 ```
     
-2. This location of the module will depend on the installed version of PowerShell and on the scope chosen (Allusers/CurrentUser)
+2. The location of the installed module will depend on the version of PowerShell you have and on the scope chosen above (Allusers/CurrentUser)
     
 3. If using PowerShell 7.x and scope is AllUsers, enter the following (adjust as necessary):
     
