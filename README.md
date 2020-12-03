@@ -3,8 +3,8 @@ Find warranty and support contract information for HPE hardware using PowerShell
 
 ## Requirements
 
-Internet facing computer
-Selenium PowerShell Module downloaded from the PowerShell Gallery
+* Internet facing computer
+* Selenium PowerShell Module downloaded from the PowerShell Gallery
 
 ## Installation
 
