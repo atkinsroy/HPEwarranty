@@ -16,16 +16,16 @@ To use the script on an Internet facing computer:
     PS> Get-module Selenium -Listavailable
 ```
     
-The location of the installed module will depend on the version of PowerShell you have and on the scope chosen above (Allusers/CurrentUser)
+Note the location of the installed module. This will depend on the version of PowerShell you have and on the scope chosen above (Allusers/CurrentUser)
     
-2. If you are using PowerShell 7.x and scope is AllUsers, enter the following (adjust as necessary):
+2. If you are using PowerShell 7.x and with scope AllUsers, enter the following (adjust as necessary):
     
 ```powershell
     PS> $env:PATH += "C:\Program Files\PowerShell\Modules\Selenium\3.0.1\assemblies\"
     PS> Add-Type -Path "C:\Program Files\PowerShell\Modules\Selenium\3.0.1\assemblies\WebDriver.dll"
 ```
 
-3. Selenium ships with Browser drivers for Chrome, Firefox, Edge. These will probably be out of date for the version of the broswer you have installed. You will need to download a matching driver for the version of the brower you are using. For Chrome, install the appropriate driver from  https://sites.google.com/a/chromium.org/chromedriver/downloads, and replace the chromedriver.exe file in the same Selenium install folder, as above.
+3. Selenium ships with Browser drivers for Chrome, Firefox, Edge. These will probably be out of date for the version of the broswer you have installed. You will need to download a matching driver. For Chrome, install the appropriate driver from  https://sites.google.com/a/chromium.org/chromedriver/downloads, replacing the chromedriver.exe file in the same Selenium install folder, as above.
 
 ## Example usage
 ```powershell
